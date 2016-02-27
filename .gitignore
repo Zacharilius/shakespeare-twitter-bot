@@ -1,5 +1,6 @@
 # Shakespeare twitter bot
-shakespeare_twitter_bot/shakespeare_twitter_bot/settings.py
+*.pyc
+key.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
