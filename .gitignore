@@ -1,5 +1,5 @@
 # Shakespeare twitter bot
-secret.py
+settings.py
 venv/
 *.pyc
 key.txt
