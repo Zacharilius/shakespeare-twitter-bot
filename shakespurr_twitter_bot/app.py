@@ -41,10 +41,15 @@ class ShakespeareQuote(db.Model):
     quote = TextField()
     created = DateTimeField(default=datetime.datetime.now)
     source_url = TextField()
+    is_tweeted = BooleanField(default=False)
+
+    def set_tweeted(self):
+        self.is_tweeted = True
+        self.save()
 
 
 class ShakespeareQuoteAdmin(ModelAdmin):
-    columns = ('quote', 'created')
+    columns = ('quote', 'created', 'source_url', 'is_tweeted')
 
 
 # ------------------------------------------------------------------------------
@@ -57,26 +62,7 @@ def index():
 
 @app.route('/tweet')
 def tweet():
-    # twitter = TwitterAPI()
-    # twitter.tweet("A horse! A horse! My kingdom for a horse!")
     return 'tweet'
-
-
-# ------------------------------------------------------------------------------
-# Twitter
-
-class TwitterAPI:
-    def __init__(self):
-        consumer_key = "zYHhJVjVQqXdri098oEzxqLBU"
-        consumer_secret = settings.consumer_secret
-        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-        access_token = "4248624134-gjIafbmt06dTTW9CRQOf9tE4KCOpPWIYHLZRqQX"
-        access_token_secret = settings.access_token_secret
-        auth.set_access_token(access_token, access_token_secret)
-        self.api = tweepy.API(auth)
-
-    def tweet(self, message):
-        self.api.update_status(status=message)
 
 
 # ------------------------------------------------------------------------------
