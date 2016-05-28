@@ -1,5 +1,5 @@
 import datetime
-from flask import Flask, request, session
+from flask import Flask, render_template, request, session
 from flask_peewee.db import Database
 from flask_peewee.admin import Admin, ModelAdmin
 from flask_peewee.auth import Auth
@@ -57,12 +57,12 @@ class ShakespeareQuoteAdmin(ModelAdmin):
 
 @app.route('/')
 def index():
-    return 'index'
+    return render_template('shakespurrean_twitter_bot.html')
 
 
-@app.route('/tweet')
+@app.route('/shakespurrean_twitter_bot')
 def tweet():
-    return 'tweet'
+    return render_template('shakespurrean_twitter_bot.html')
 
 
 # ------------------------------------------------------------------------------

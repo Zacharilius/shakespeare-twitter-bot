@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://v4-alpha.getbootstrap.com/examples/album/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Zachary Bensley">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+    <title>Shakespurrean</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='lib/bootstrap-4.0.0-alpha.2/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Site -->
+    <link href="{{ url_for('static', filename='site.css') }}" rel="stylesheet">
+
+    <!-- Page -->
+    <link href="{{ url_for('static', filename='shakespurrean_twitter_bot.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar-collapse collapse inverse" id="navbar-header">
+      <div class="container-fluid">
+        <div class="about">
+          <h4>Projects</h4>
+          <p class="text-muted">I'm hosting some small projects on PythonAnywhere. Contact Me if you want to collaborate on a project.</p>
+        </div>
+        <div class="social">
+          <h4>Contact Me</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://twitter.com/zacharilius">Twitter</a></li>
+            <li><a href="https://www.instagram.com/zacharilius/">Instagram</a></li>
+            <li><a href="https://www.github.com/zacharilius/">GitHub</a></li>
+            <li><a href="mailto:zabensley@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-static-top navbar-dark bg-inverse">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
+          ☰
+        </button>
+        <a href="/" class="navbar-brand">Zacharilius</a>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <img style="width: 100%" src="{{ url_for('static', filename='img/william_shakespurr.png') }}">
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <a class="twitter-timeline" href="https://twitter.com/shakespurrean" data-widget-id="736601700685873153">Tweets by @shakespurrean</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+      /* HACK: Satisfies bootstrap-4's requirement to require tether object. */
+      window.Tether = {};
+    </script>
+
+    <script src="{{ url_for('static', filename='lib/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/bootstrap-4.0.0-alpha.2/dist/js/bootstrap.min.js') }}"></script>
+</body>
+</html>
