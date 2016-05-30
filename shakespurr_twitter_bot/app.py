@@ -75,7 +75,8 @@ if __name__ == "__main__":
     admin.register(ShakespeareQuote, ShakespeareQuoteAdmin)
     admin.setup()
 
-    app.run(
-        host='0.0.0.0',
-        port=int(environ.get("PORT", 5000))
-    )
+    if 'liveconsole' not in gethostname():
+        app.run(
+            host='0.0.0.0',
+            port=int(environ.get("PORT", 5000))
+        )
